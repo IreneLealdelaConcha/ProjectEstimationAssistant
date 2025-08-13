@@ -5,138 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Project Estimation Assistant</title>
 <style>
-  body {
-    font-family: Cambria, serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f7f7;
-    color: #333;
-  }
-  header {
-    background-color: #DF2700;
-    color: white;
-    padding: 2rem;
-    text-align: center;
-  }
-  main {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-  .chat-container {
-    border: 2px solid #DF2700;
-    border-radius: 10px;
-    padding: 1rem;
-    background-color: #fff;
-    max-width: 600px;
-    margin: 2rem auto;
-  }
-  .chat-box {
-    height: 300px;
-    overflow-y: auto;
-    border: 1px solid #ccc;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
-    background: #f1f1f1;
-    border-radius: 5px;
-  }
-  .user-msg {
-    text-align: right;
-    margin: 0.5rem 0;
-    color: white;
-    background-color: #DF2700;
-    padding: 0.3rem 0.6rem;
-    display: inline-block;
-    border-radius: 5px;
-  }
-  .bot-msg {
-    text-align: left;
-    margin: 0.5rem 0;
-    background-color: #e0e0e0;
-    padding: 0.3rem 0.6rem;
-    display: inline-block;
-    border-radius: 5px;
-  }
-  input[type="text"] {
-    width: 80%;
-    padding: 0.5rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  button {
-    padding: 0.5rem 1rem;
-    background-color: #DF2700;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #b02000;
-  }
+  body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+  iframe { border: 1px solid #ccc; width: 100%; height: 600px; }
 </style>
 </head>
 <body>
-
-<header>
-  <h1>Project Estimation Assistant</h1>
-  <p>Interactive chatbot demo</p>
-</header>
-
-<main>
-  <h2>Chat Simulation</h2>
-  <p>Type your question below and see the bot's responses (simulated).</p>
-
-  <div class="chat-container">
-    <div id="chat" class="chat-box"></div>
-    <input type="text" id="userInput" placeholder="Type a message..." />
-    <button onclick="sendMessage()">Send</button>
-  </div>
-</main>
-
-<script>
-const chat = document.getElementById('chat');
-
-// Predefined bot responses
-const responses = {
-  "hello": "Hello! I’m your Project Estimation Assistant.",
-  "how to estimate a project": "You can start by breaking the project into tasks, then estimate time and resources for each.",
-  "what is your name": "I am the Project Estimation Assistant, here to help with your project planning!",
-  "default": "I’m not sure about that. Can you try asking differently?"
-};
-
-function sendMessage() {
-  const input = document.getElementById('userInput');
-  const userText = input.value.trim();
-  if (userText === "") return;
-
-  // Show user message
-  const userMsg = document.createElement('div');
-  userMsg.className = 'user-msg';
-  userMsg.textContent = userText;
-  chat.appendChild(userMsg);
-
-  // Scroll down
-  chat.scrollTop = chat.scrollHeight;
-
-  // Generate bot response
-  const botMsg = document.createElement('div');
-  botMsg.className = 'bot-msg';
-  const key = userText.toLowerCase();
-  botMsg.textContent = responses[key] || responses['default'];
-  setTimeout(() => {
-    chat.appendChild(botMsg);
-    chat.scrollTop = chat.scrollHeight;
-  }, 500); // simulate typing delay
-
-  input.value = '';
-  input.focus();
-}
-</script>
-
-<footer>
-  &copy; 2025 Irene Leal
-</footer>
-
+<h1>Project Estimation Assistant</h1>
+<iframe src="https://copilotstudio.microsoft.com/environments/Default-6f74127f-ca15-4c85-ba29-8a0a2e7e3cf3/bots/cra3d_projectEstimationAssistant/canvas?__version__=2&enableFileAttachment=true" 
+        title="Project Estimation Assistant Chatbot">
+</iframe>
 </body>
 </html>
