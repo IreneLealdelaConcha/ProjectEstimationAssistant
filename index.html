@@ -83,11 +83,25 @@
 </main>
 
 <a class="download-btn" href="chatbotDescription_IreneLeal.pdf" download
-     style="position: fixed; right: 20px; top: 50%; transform: translateY(-50%);
-            background-color: #4b6cb7; color: white; text-decoration: none; 
-            padding: 0.75rem 1.5rem; border-radius: 5px; font-weight: bold;">
-    Download Project Steps (PDF)
-  </a>
+   style="
+     position: fixed; 
+     right: 50px; /* distance from the right edge */
+     top: 50%; 
+     transform: translateY(-50%);
+     background-color: #4b6cb7; 
+     color: white; 
+     text-decoration: none; 
+     padding: 0.75rem 1.5rem; 
+     border-radius: 5px; 
+     font-weight: bold;
+     transition: background-color 0.3s, transform 0.2s;
+   "
+   onmouseover="this.style.backgroundColor='#3a539b'; this.style.transform='translateY(-50%) scale(1.05)';"
+   onmouseout="this.style.backgroundColor='#4b6cb7'; this.style.transform='translateY(-50%) scale(1)';"
+>
+  Download Project Steps (PDF)
+</a>
+
 
 <footer>
   &copy; 2025 Irene Leal
