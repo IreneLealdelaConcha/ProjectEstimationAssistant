@@ -1,0 +1,14 @@
+{
+  "$kind": "BotConfiguration",
+  "gPTSettings": {
+    "$kind": "GPTSettings",
+    "defaultSchemaName": "cra3d_projectEstimationAssistant.gpt.default"
+  },
+  "aISettings": {
+    "$kind": "AISettings",
+    "useModelKnowledge": true,
+    "isFileAnalysisEnabled": true,
+    "isSemanticSearchEnabled": true,
+    "optInUseLatestModels": false
+  }
+}
