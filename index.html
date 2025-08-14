@@ -21,8 +21,10 @@
     header {
       background-color: #4b6cb7;
       color: white;
-      padding: 1rem;
-      text-align: center;
+      padding:20px; 
+      display:flex; 
+      flex-direction:column; 
+      align-items:center;"
     }
     main {
       flex: 1;
@@ -52,21 +54,24 @@
   </style>
 </head>
 <body>
-<header style="background-color:#4b6cb7; color:white; padding:20px; display:flex; justify-content:center; align-items:center; gap:15px;">
-  <img src="icon2.png" alt="Chatbot Icon" style="width:80px; height:auto;">
-  <div style="text-align: left;">
-    <h1 style="margin:0;">Project Estimation Assistant</h1>
-    <p style="margin:0;"><b>Interactive chatbot to estimate project timelines</b></p>
+<header>
+  <!-- Top row: icon + title/subtitle -->
+  <div style="display:flex; align-items:center; gap:15px;">
+    <img src="icon2.png" alt="Chatbot Icon" style="width:80px; height:auto;">
+    <div style="text-align:left;">
+      <h1 style="margin:0;">Project Estimation Assistant</h1>
+      <p style="margin:0;"><b>Interactive chatbot to estimate project timelines</b></p>
+    </div>
   </div>
-  <div class="container" style="max-width:900px; text-align:center; margin-top:15px;">
-    <p>
-      This Copilot assists with early-stage time estimates for automation projects 
-      using Robotic Process Automation (RPA), Conversational AI or Low-code. 
-      It collects key project parameters, calculates a rough effort estimate, and 
-      outputs a total hours with buffer. Built in Microsoft Copilot Studio for the 
-      AI Chatbot Developer assessment.
-    </p>
-  </div>
+
+  <!-- Centered paragraph below -->
+  <p style="max-width:900px; text-align:center; margin-top:15px;">
+    This Copilot assists with early-stage time estimates for automation projects 
+    using Robotic Process Automation (RPA), Conversational AI or Low-code. 
+    It collects key project parameters, calculates a rough effort estimate, and 
+    outputs a total hours with buffer. Built in Microsoft Copilot Studio for the 
+    AI Chatbot Developer assessment.
+  </p>
 </header>
   
 <main>
