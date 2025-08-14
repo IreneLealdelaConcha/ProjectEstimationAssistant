@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project Estimation Assistant</title>
   
-   <!-- Favicon -->
+  <!-- Favicon -->
   <link rel="icon" href="icon2.png" type="image/png">
 
   <style>
@@ -18,14 +18,38 @@
       min-height: 100vh;
       background: #f9f9f9;
     }
+
     header {
       background-color: #4b6cb7;
       color: white;
-      padding:20px; 
-      display:flex; 
-      flex-direction:column; 
-      align-items:center;"
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
+
+    /* Top row: icon + text */
+    .header-top {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .header-text {
+      text-align: left;
+    }
+
+    .header-text h1, .header-text p {
+      margin: 0;
+    }
+
+    /* Centered paragraph below */
+    .header-desc {
+      max-width: 900px;
+      text-align: center;
+      margin-top: 15px;
+    }
+
     main {
       flex: 1;
       display: flex;
@@ -33,6 +57,7 @@
       align-items: center;
       padding: 2rem;
     }
+
     iframe {
       width: 100%;
       max-width: 800px;
@@ -41,31 +66,50 @@
       border-radius: 8px;
       margin-bottom: 1.5rem;
     }
+
+    /* Download button */
+    .download-btn {
+      position: fixed;
+      right: 50px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #4b6cb7;
+      color: white;
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .download-btn:hover {
+      background-color: #3a539b;
+      transform: translateY(-50%) scale(1.05);
+    }
+
     footer {
       position: fixed;
       bottom: 0;
       left: 0;
       width: 100%;
       text-align: center;
-      padding: 10px 0;;
+      padding: 10px 0;
       font-size: 0.9rem;
       color: #555;
     }
   </style>
 </head>
 <body>
+
 <header>
-  <!-- Top row: icon + title/subtitle -->
-  <div style="display:flex; align-items:center; gap:15px;">
+  <div class="header-top">
     <img src="icon2.png" alt="Chatbot Icon" style="width:80px; height:auto;">
-    <div style="text-align:left;">
-      <h1 style="margin:0;">Project Estimation Assistant</h1>
-      <p style="margin:0;"><b>Interactive chatbot to estimate project timelines</b></p>
+    <div class="header-text">
+      <h1>Project Estimation Assistant</h1>
+      <p><b>Interactive chatbot to estimate project timelines</b></p>
     </div>
   </div>
-
-  <!-- Centered paragraph below -->
-  <p style="max-width:900px; text-align:center; margin-top:15px;">
+  <p class="header-desc">
     This Copilot assists with early-stage time estimates for automation projects 
     using Robotic Process Automation (RPA), Conversational AI or Low-code. 
     It collects key project parameters, calculates a rough effort estimate, and 
@@ -73,35 +117,17 @@
     AI Chatbot Developer assessment.
   </p>
 </header>
-  
+
 <main>
-  <!-- Embedded chatbot -->
   <iframe 
     src="https://copilotstudio.microsoft.com/environments/Default-6f74127f-ca15-4c85-ba29-8a0a2e7e3cf3/bots/cra3d_projectEstimationAssistant/canvas?__version__=2&enableFileAttachment=true"
     title="Project Estimation Assistant Bot">
   </iframe>
 </main>
 
-<a class="download-btn" href="chatbotDescription_IreneLeal.pdf" download
-   style="
-     position: fixed; 
-     right: 50px; /* distance from the right edge */
-     top: 50%; 
-     transform: translateY(-50%);
-     background-color: #4b6cb7; 
-     color: white; 
-     text-decoration: none; 
-     padding: 0.75rem 1.5rem; 
-     border-radius: 5px; 
-     font-weight: bold;
-     transition: background-color 0.3s, transform 0.2s;
-   "
-   onmouseover="this.style.backgroundColor='#3a539b'; this.style.transform='translateY(-50%) scale(1.05)';"
-   onmouseout="this.style.backgroundColor='#4b6cb7'; this.style.transform='translateY(-50%) scale(1)';"
->
+<a class="download-btn" href="chatbotDescription_IreneLeal.pdf" download>
   Download Project Steps (PDF)
 </a>
-
 
 <footer>
   &copy; 2025 Irene Leal
