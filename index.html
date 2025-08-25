@@ -93,9 +93,11 @@
   /* Responsive: en móviles se convierte en botón arriba */
     @media (max-width:800px){
       .download-btn {
-        position: static;
+        position: relative;
+        top: auto;
+        right: auto;
         transform: none;
-        display: inline-block;
+        display: block;
         margin: 20px auto;
       }
     }
@@ -136,11 +138,11 @@
     src="https://copilotstudio.microsoft.com/environments/Default-6f74127f-ca15-4c85-ba29-8a0a2e7e3cf3/bots/cra3d_projectEstimationAssistant/canvas?__version__=2&enableFileAttachment=true"
     title="Project Estimation Assistant Bot">
   </iframe>
+  
+  <a class="download-btn" href="chatbotDescription_IreneLeal.pdf" download>
+  📄 Download Project Steps (PDF)
+  </a>
 </main>
-
-<a class="download-btn" href="chatbotDescription_IreneLeal.pdf" download>
-  Download Project Steps (PDF)
-</a>
 
 <footer>
   &copy; 2025 Irene Leal
