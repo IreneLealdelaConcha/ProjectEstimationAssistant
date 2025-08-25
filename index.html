@@ -69,12 +69,9 @@
 
     /* Download button */
     .download-btn {
-      position: relative;
-      top: auto;
-      right: auto;
-      transform: none;
-      display: block;
-      margin: 20px auto;      
+      position: fixed;
+      top: 50%;
+      right: 30 px;
       transform: translateY(-50%);
       background-color: #4b6cb7;
       color: white;
@@ -85,25 +82,35 @@
       text-align: center;
       width: 220px;
       transition: background-color 0.3s, transform 0.2s;
-      z-index: 1;
+      z-index: 1000;
+    }
+    
+    .download-btn:hover {
+      background-color: #3a539b;
+      transform: translateY(-50%) scale(1.05);
+    }
+    
+    .btn-project {
+      top: 40%;  /* un poco más arriba */
+    }
+    
+    .btn-flow {
+      top: 55%;  /* debajo del primero */
     }
 
-  /* Responsive: en móviles se convierte en botón arriba */
-    @media (max-width:801px){
+  /* Responsive */
+    @media (max-width:800px){
       .download-btn {
-        position: fixed;
-        right: 150px;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 1000;
+        width: 160px;
+        padding: 10px 12px;
+        right: 10px;
+        top: 20%;
+        transform: translateY(0);
+        font-size: 0.9rem;
       }
-      .download-btn:hover {
-        background-color: #3a539b;
-        transform: translateY(-50%) scale(1.05);
-      }
-      main {
-        padding-right: 260px; 
-      }
+
+      .btn-project { top: 15%; }
+      .btn-flow { top: 25%; }
     }
 
     footer {
@@ -142,11 +149,15 @@
     src="https://copilotstudio.microsoft.com/environments/Default-6f74127f-ca15-4c85-ba29-8a0a2e7e3cf3/bots/cra3d_projectEstimationAssistant/canvas?__version__=2&enableFileAttachment=true"
     title="Project Estimation Assistant Bot">
   </iframe>
+</main>
   
   <a class="download-btn" href="chatbotDescription_IreneLeal.pdf" download>
   📄 Download Project Steps (PDF)
   </a>
-</main>
+  
+  <a class="download-btn btn-flow" href="Conversation Flow_ProjectTimeEstimation.pdf" download>
+  🗂 Download Conversation Flow
+  </a>
 
 <footer>
   &copy; 2025 Irene Leal
